@@ -1,0 +1,17 @@
+name: Testes E2E com Cypress
+on:
+  push:
+  pull_request:
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+      - name: Testar aplicação
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm install
+          start: npm start
+          wait-on: 'http://localhost:3000/cadastro'
+          wait-on-timeout: 60

@@ -1,0 +1,14 @@
+{
+  "name": "atividade-cypress-cadastro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Atividade escolar: testes E2E de cadastro com Cypress",
+  "scripts": {
+    "start": "node server.js",
+    "cy:open": "cypress open",
+    "test:e2e": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^15.0.0"
+  }
+}
